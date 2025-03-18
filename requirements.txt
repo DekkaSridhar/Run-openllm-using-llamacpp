@@ -1,0 +1,10 @@
+# set FORCE_CMAKE=1 && set CMAKE_ARGS=-DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS   # run on cpu
+# set FORCE_CMAKE=1 && set CMAKE_ARGS=-DLLAMA_AVX=off -DLLAMA_AVX2=off -DLLAMA_FMA=off -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS -DGGML_CUDA=on
+# set FORCE_CMAKE=1 && set CMAKE_ARGS=-DGGML_CUDA=ON CMAKE_ARGS=-DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS
+## -DGGML_CUDA=on  => To run on the GPU, 
+## -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS  => To run on the GPU,
+or
+set FORCE_CMAKE=1 && set CMAKE_ARGS=-DGGML_CUDA=on   # run on gpu   
+echo %CMAKE_ARGS%          # to check if the setup is correctlhy done or not
+
+pip install llama-cpp-python --force-reinstall --upgrade --no-cache-dir --verbose
